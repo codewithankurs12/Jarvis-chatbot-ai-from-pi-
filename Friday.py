@@ -10,7 +10,10 @@ def ui():
 
 def friday():
     t1 = threading.Thread(target=friday_brain)
+    t2 = threading.Thread(target=ui)
     t1.start()
     t1.join()
+    t2.start()
+    t2.join()
 
 friday()
